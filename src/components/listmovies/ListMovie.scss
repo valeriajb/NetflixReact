@@ -1,0 +1,41 @@
+.container-listMovies{ 
+    margin-top: 15px;
+    margin-left: 15px;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h3{ 
+        color: white;
+        font-size: 30px;
+        font-weight: 700;
+
+    }
+    .container-slider{ 
+        position: relative;
+        .arrow{ 
+            top: 0;
+            color: white;
+            font-size: 80px;
+            position: absolute;
+            z-index: 10;
+            width: 50px;
+            height: 100%;
+            background-color: rgb(22, 22, 22, 0.5);
+           
+        }
+        .arrowRight{ 
+            transform: rotate(180deg);
+            right: 0px;
+        }
+        .container-wrap{ 
+            margin-left: 50px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            width: max-content;
+            transform: translate(0);
+        }
+    }
+}
