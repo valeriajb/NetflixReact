@@ -7,7 +7,6 @@ function NavBar() {
 
   const [isScroll, setIsScroll] = useState(false);
   window.onscroll = () =>{
-    console.log(window.pageYOffset)
     setIsScroll(window.pageYOffset != 0 ? true : false);
   };
 
