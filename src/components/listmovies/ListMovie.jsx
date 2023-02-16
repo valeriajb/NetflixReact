@@ -1,11 +1,12 @@
 import React, { useState, useRef } from "react";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import MovieItem from "../movieitem/MovieItem";
+import {useGetMovies} from '../../hooks/useGetMovies';
 import "./ListMovie.scss";
 import { display } from "@mui/system";
-function ListMovie({ title = "Popular en Netflix" }) {
+function ListMovie({ title = "Popular en Netflix"}) {
 
-
+  const{listMovies}=useGetMovies() 
   const sliderRef = useRef();
   const [handleClick, setHandleClick] = useState(0);
   const [isVisibleLeft, setisVisibleLeft] = useState(false);

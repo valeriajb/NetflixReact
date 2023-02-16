@@ -3,8 +3,9 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import AddIcon from "@mui/icons-material/Add";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import ThumbDownOffAltIcon from "@mui/icons-material/ThumbDownOffAlt";
+import {Link} from 'react-router-dom';
 import "./MovieItem.scss";
-function MovieItem({ i }) {
+function MovieItem({ i, name,descrip,image,date }) {
   const trailer =
     "https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=139&oauth2_token_id=57447761";
   const [isHovered, setIsHovered] = useState(false);
@@ -24,7 +25,7 @@ function MovieItem({ i }) {
           <video src={trailer} autoPlay={true} loop />
           <div className="container-infoMovie">
             <div className="container-infoIcons">
-              <PlayArrowIcon className="icons" />
+              <Link to="/movie"><PlayArrowIcon className="icons" /></Link>
               <AddIcon className="icons" />
               <ThumbUpOffAltIcon className="icons" />
               <ThumbDownOffAltIcon className="icons" />
