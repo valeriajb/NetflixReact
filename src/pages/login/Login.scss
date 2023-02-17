@@ -1,23 +1,83 @@
-.container-register{ 
-     background: //linear-gradient(
-    //   to bottom,
-    //   rgba(0, 0, 0, 0) 0%,
-    //   rgba(0, 0, 0, 1) 100%
-    // ),
-    url("https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg");
+.container-login {
+    position: relative;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 100%),
+        url("https://assets.nflxext.com/ffe/siteui/vlv3/83e8c151-107d-4e8f-b95a-d2ba99d49bb9/3154510d-3849-4045-83c0-0fe187102834/CO-es-20230213-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
     width: 100vw;
     height: 100vh;
-    .container-top{
+
+    .container-top {
         padding: 30px;
+
         img {
             height: 40px;
         }
     }
-    .container-form{
-        display: flex;
-        flex-direction: column;
-       background-color: aqua;
 
+    .container-form {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border-radius: 5px;
+        padding: 30px;
+        width: 300px;
+        height: 300px;
+        background-color: var(--main-color);
+        cursor: pointer;
+        form {
+            width: 300px;
+            height: 300px;
+            border-radius: 5px;
+            background-color: var(--main-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            h1 {
+                color: white;
+            }
+
+
+            input {
+                height: 40px;
+                border-radius: 5px;
+                background-color: gray;
+                color: white;
+                padding-left: 10px;
+
+                &::placeholder {
+                    color: lightgray;
+                }
+            }
+
+            .spanSend{
+                padding: 5px;
+                background-color: red;
+                height: 40px;
+                border: solid 1px red;
+                border-radius:5px;
+                color: white;
+                font-size: 18px;
+            }
+
+
+            
+
+        }
+
+        p {
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        span {
+            font-weight: 600;
+            color: white;
+        }
     }
-    
 }

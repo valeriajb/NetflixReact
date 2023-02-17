@@ -1,10 +1,11 @@
-import React, {useState}from 'react'
+import React, {useState,useContext}from 'react'
+import {LoginContext} from '../context/contextLogin';
 import { Navigate } from 'react-router-dom'
 
 function PrivateRouter({children}) {
-const [stateUser, setStateUser] = useState(true);
+  const {isPermission}=useContext(LoginContext)
   return (
-    stateUser?children:<Navigate to="/login"/>
+    isPermission?children:<Navigate to="/login"/>
   )
 }
 

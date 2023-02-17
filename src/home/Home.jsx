@@ -1,3 +1,4 @@
+import {useEffect,useState} from 'react';
 import NavBar from "../components/navBar/NavBar"
 import Features from '../components/features/Features';
 import ListMovie from '../components/listmovies/ListMovie';
@@ -6,12 +7,16 @@ import {Outlet} from 'react-router-dom';
 import "./Home.scss"
 function Home() {
 
-
+  const [userTitle, setUserTitle] = useState("")
+  useEffect(() => {
+     setUserTitle(localStorage.getItem("nameUser"))
+  }, [])
+  
   return (
     <div className="home-container">
       <NavBar />
       <Features />
-      <ListMovie title="Continuar viendo"/>
+      <ListMovie title={`Continua viendo, ${userTitle}.` }/>
 
     <Outlet/>
     </div>
