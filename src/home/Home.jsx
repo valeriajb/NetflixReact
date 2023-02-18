@@ -16,7 +16,8 @@ function Home() {
     <div className="home-container">
       <NavBar />
       <Features />
-      <ListMovie title={`Continua viendo, ${userTitle}.` }/>
+      <ListMovie title={`Continúa viendo, ${userTitle}.` }/>
+      <ListMovie title={`Más vistos` }/>
 
     <Outlet/>
     </div>

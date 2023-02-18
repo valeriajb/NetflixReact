@@ -6,7 +6,7 @@ import "./ListMovie.scss";
 import { display } from "@mui/system";
 function ListMovie({ title = "Popular en Netflix"}) {
 
-  const{listMovies}=useGetMovies() 
+  const{listMovies}=useGetMovies()
   const sliderRef = useRef();
   const [handleClick, setHandleClick] = useState(0);
   const [isVisibleLeft, setisVisibleLeft] = useState(false);
@@ -40,6 +40,7 @@ function ListMovie({ title = "Popular en Netflix"}) {
           style={{ display: !isVisibleLeft && "none" }}
         />
         <div className="container-wrap" ref={sliderRef}>
+          
           <MovieItem i={0} />
           <MovieItem i={1} />
           <MovieItem i={2} />
@@ -49,7 +50,7 @@ function ListMovie({ title = "Popular en Netflix"}) {
           <MovieItem i={6} />
           <MovieItem i={7} />
           <MovieItem i={8} />
-          <MovieItem i={9} />
+          <MovieItem i={9} /> */
         </div>
         <ArrowBackIosNewOutlinedIcon
           className="arrow arrowRight"

@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./ButtonRed.scss";
-function ButtonRed({ title, action,size }) {
+function ButtonRed({ title }) {
   return (
-    <Link style={{textDecoration:"none", width:size}}to="/login">
-      <span className="btnRed">{title}</span>
-    </Link>
+
+    <button className="btnRed" >
+      <Link style={{ textDecoration: "none", color: "white" }} to="/login">
+        {title}
+      </Link>
+    </button>
+
   );
 }
 

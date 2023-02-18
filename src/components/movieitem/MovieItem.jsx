@@ -16,6 +16,7 @@ function MovieItem({ i, name,descrip,image,date }) {
       onmouseleave={() => setIsHovered(false)}
       style={{ left: isHovered && i * 225 - 50 }}
     >
+      <p>1</p>
       <img className="image-container"
         src="https://i.blogs.es/2c1ee1/matrix-franquicia/1366_2000.jpeg"
         alt=""

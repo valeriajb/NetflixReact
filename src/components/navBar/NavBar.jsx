@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
 import NotificationsSharpIcon from "@mui/icons-material/NotificationsSharp";
 import ArrowDropDownSharpIcon from "@mui/icons-material/ArrowDropDownSharp";
+import {Link} from 'react-router-dom';
 import "./NavBar.scss";
 function NavBar() {
 
@@ -9,8 +10,6 @@ function NavBar() {
   window.onscroll = () =>{
     setIsScroll(window.pageYOffset != 0 ? true : false);
   };
-
-  
 
   return (
     <div className={"navBar-container " + (isScroll && "isScroll")}>
@@ -37,7 +36,7 @@ function NavBar() {
           <ArrowDropDownSharpIcon />
           <div className={"container-section " +  (isScroll && "isScroll")}>
             <span>Settings</span>
-            <span>Logout</span>
+            <Link style={{textDecoration:"none"}}to="/login"><span>Logout</span></Link>
           </div>
         </div>
       </div>
